@@ -17,6 +17,8 @@
 		E27F943A28514896003B2502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* ContentView.swift */; };
 		E27F943B28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
 		E27F943C28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
+		E27F944C285148F7003B2502 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E27F944B285148F7003B2502 /* .gitignore */; };
+		E27F944E2851494B003B2502 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = E27F944D2851494B003B2502 /* .gitattributes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E27F942F28514896003B2502 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27F943328514896003B2502 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E27F943528514896003B2502 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		E27F944B285148F7003B2502 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E27F944D2851494B003B2502 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		E27F940928514893003B2502 = {
 			isa = PBXGroup;
 			children = (
+				E27F944D2851494B003B2502 /* .gitattributes */,
+				E27F944B285148F7003B2502 /* .gitignore */,
 				E27F940E28514893003B2502 /* Shared */,
 				E27F941D28514896003B2502 /* macOS */,
 				E27F942628514896003B2502 /* Tests iOS */,
@@ -266,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27F944C285148F7003B2502 /* .gitignore in Resources */,
+				E27F944E2851494B003B2502 /* .gitattributes in Resources */,
 				E27F943B28514896003B2502 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
