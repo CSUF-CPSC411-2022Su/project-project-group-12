@@ -9,9 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+         VStack {
+             Text("FOOOOOD")
+                 .font(.title)
+                 .foregroundColor(Color.red)
+                 .multilineTextAlignment(.center)
+                 .padding()
+             Text("I'm pleased to meet you") // This was added
+                 .padding()
+         }
+     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
