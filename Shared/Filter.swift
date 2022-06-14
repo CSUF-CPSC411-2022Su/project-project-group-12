@@ -16,6 +16,11 @@ class Filter {
         self.distance = distance
     }
     
+    init() {
+        filterType = ""
+        distance = 0
+    }
+    
 //    func isIncluded(_ filterType: String) -> Bool {
 //        // Checks if filter name being searched is valid
 //    }
