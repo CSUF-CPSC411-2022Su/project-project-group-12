@@ -16,9 +16,9 @@ class Filter {
         self.distance = distance
     }
     
-    func isIncluded(_ filterType: String) -> Bool {
-        // Checks if filter name being searched is valid
-    }
+//    func isIncluded(_ filterType: String) -> Bool {
+//        // Checks if filter name being searched is valid
+//    }
     
     func distanceRange(_ distance: String) {
         // returns list of restaurants within the given distance range
