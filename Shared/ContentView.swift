@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var restaurants: [String] = ["McDonalds", "Chik-Fil-A", "Arbys", "Albertos", "Chipotle"].reversed()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            ZStack
+            {
+                ForEach(restaurants, id: \.self) { restaurant in
+                    CardView(restaurant: restaurant)
+                }
+            }
+        }
     }
 }
 
