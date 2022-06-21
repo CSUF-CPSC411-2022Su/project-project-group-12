@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D431B64D28619DC100E5C2A9 /* RestaruantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D431B64C28619DC100E5C2A9 /* RestaruantView.swift */; };
+		D431B64E28619DC100E5C2A9 /* RestaruantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D431B64C28619DC100E5C2A9 /* RestaruantView.swift */; };
 		D453FE58285AB59500267143 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453FE57285AB59500267143 /* CardView.swift */; };
 		D453FE59285AB59500267143 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453FE57285AB59500267143 /* CardView.swift */; };
 		E27F942828514896003B2502 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F942728514896003B2502 /* Tests_iOS.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D431B64C28619DC100E5C2A9 /* RestaruantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaruantView.swift; sourceTree = "<group>"; };
 		D453FE57285AB59500267143 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E27F940F28514893003B2502 /* Group_Project_12App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Project_12App.swift; sourceTree = "<group>"; };
 		E27F941028514893003B2502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 				E27F941028514893003B2502 /* ContentView.swift */,
 				E27F941128514896003B2502 /* Assets.xcassets */,
 				D453FE57285AB59500267143 /* CardView.swift */,
+				D431B64C28619DC100E5C2A9 /* RestaruantView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -314,6 +318,7 @@
 				E27F943928514896003B2502 /* ContentView.swift in Sources */,
 				D453FE58285AB59500267143 /* CardView.swift in Sources */,
 				E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */,
+				D431B64D28619DC100E5C2A9 /* RestaruantView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +329,7 @@
 				E27F943A28514896003B2502 /* ContentView.swift in Sources */,
 				D453FE59285AB59500267143 /* CardView.swift in Sources */,
 				E27F943828514896003B2502 /* Group_Project_12App.swift in Sources */,
+				D431B64E28619DC100E5C2A9 /* RestaruantView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

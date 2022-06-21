@@ -10,8 +10,7 @@ import SwiftUI
 struct CardView: View {
     var restaurant: String
     @State private var offset = CGSize.zero
-    @State private var color: Color = .gray
-    
+    @State private var color: Color = .black
     var body: some View {
         ZStack{
             Rectangle()
@@ -21,7 +20,14 @@ struct CardView: View {
             HStack{
                 Text(restaurant)
                     .font(.largeTitle)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
+                TabView {
+                            RestaruantView()
+                                .tabItem {
+                                    Image(systemName: "info")
+                                    Text("Restaurants Saved")
+                                }
+                        }.environmentObject(restaurant)
             }
         }
     }
@@ -29,6 +35,9 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(restaurant: "McDonalds")
+        Group {
+            CardView(restaurant: "McDonalds")
+            CardView(restaurant: "McDonalds")
+        }
     }
 }
