@@ -8,10 +8,32 @@
 import SwiftUI
 
 struct googlemap: View {
+    @State var input = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+           Text("Search Bar")
+               .font(.largeTitle)
+               .fontWeight(.medium)
+               .foregroundColor(Color.blue)
+           Form{
+               Section {
+                   TextField("what you want to search",text:$input)
+               }
+               VStack {
+                   Button(action:{
+                   }, label: {
+                       Text("Go")
+                   })
+               }
+
+
+           }
+
+
+
+       }
 }
+
 
 struct googlemap_Previews: PreviewProvider {
     static var previews: some View {

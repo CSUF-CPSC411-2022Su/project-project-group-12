@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationView{
          VStack {
              
              Text("FOOOOOD")
@@ -21,20 +22,7 @@ struct ContentView: View {
              Text("Welcome")
                  .foregroundColor(Color.red) // This was added
                  .padding()
-//             HStack(alignment: .center) {
-//                 Image("test")
-//                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                     .padding()
-//                 .frame(width: 100.0, height: 120.0)
-//                 Image("burger")
-//                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                     .padding()
-//                 .frame(width: 110.0, height: 125.0)
-//                 Image("dessert")
-//                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                     .padding()
-//                     .frame(width: 100.0, height: 120.0)
-//             }
+
              HStack(alignment: .center){
 //                 Image("drink")
 //                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
@@ -55,32 +43,38 @@ struct ContentView: View {
                      .frame(width: 250.0, height: 220.0)
              }
 //             Button("Google Map") {
-//                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+//
 //             }
              Spacer()
-             Button(action:{
-                         print("touch")
-                     }){
-                         
-                         Text("Food Map")
-                             .fontWeight(.bold)
-                             .font(.title)
-                             .padding()
-                             .background(Color.white)
-                             .cornerRadius(30)
-                             .foregroundColor(.green)
-                             .padding(10)
-                             .overlay(
-                                 RoundedRectangle(cornerRadius: 40)
-                                     .stroke(Color.white, lineWidth: 4)
-                                 
-                         )
-                         
-                     }
+             
+                 Button(action:{
+                             print("touch")
+                     
+                         }){
+                             NavigationLink(destination:googlemap()){
+                             Text("Food Map")
+                                 .fontWeight(.bold)
+                                 .font(.title)
+                                 .padding()
+                                 .background(Color.white)
+                                 .cornerRadius(30)
+                                 .foregroundColor(.green)
+                                 .padding(10)
+                                 .overlay(
+                                     RoundedRectangle(cornerRadius: 40)
+                                         .stroke(Color.white, lineWidth: 4)
+                                     
+                             )
+                             
+                         }
 
-         
-            
-         }
+             
+                
+             }
+             }
+                 
+             }
+             
        
         .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color.pink
