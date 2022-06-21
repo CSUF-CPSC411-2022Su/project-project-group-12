@@ -15,8 +15,8 @@
 		E27F943628514896003B2502 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F943528514896003B2502 /* Tests_macOSLaunchTests.swift */; };
 		E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F940F28514893003B2502 /* Group_Project_12App.swift */; };
 		E27F943828514896003B2502 /* Group_Project_12App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F940F28514893003B2502 /* Group_Project_12App.swift */; };
-		E27F943928514896003B2502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* ContentView.swift */; };
-		E27F943A28514896003B2502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* ContentView.swift */; };
+		E27F943928514896003B2502 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* FilterView.swift */; };
+		E27F943A28514896003B2502 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* FilterView.swift */; };
 		E27F943B28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
 		E27F943C28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
 		E27F944C285148F7003B2502 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E27F944B285148F7003B2502 /* .gitignore */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		47BE3D5A2851545200003A52 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		E27F940F28514893003B2502 /* Group_Project_12App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Project_12App.swift; sourceTree = "<group>"; };
-		E27F941028514893003B2502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E27F941028514893003B2502 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E27F941128514896003B2502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27F941628514896003B2502 /* Group Project 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group Project 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27F941C28514896003B2502 /* Group Project 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group Project 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E27F940F28514893003B2502 /* Group_Project_12App.swift */,
-				E27F941028514893003B2502 /* ContentView.swift */,
+				E27F941028514893003B2502 /* FilterView.swift */,
 				E27F941128514896003B2502 /* Assets.xcassets */,
 				47BE3D5A2851545200003A52 /* Filter.swift */,
 			);
@@ -311,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27F943928514896003B2502 /* ContentView.swift in Sources */,
+				E27F943928514896003B2502 /* FilterView.swift in Sources */,
 				47BE3D5B2851545200003A52 /* Filter.swift in Sources */,
 				E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */,
 			);
@@ -321,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27F943A28514896003B2502 /* ContentView.swift in Sources */,
+				E27F943A28514896003B2502 /* FilterView.swift in Sources */,
 				47BE3D5C2851545200003A52 /* Filter.swift in Sources */,
 				E27F943828514896003B2502 /* Group_Project_12App.swift in Sources */,
 			);

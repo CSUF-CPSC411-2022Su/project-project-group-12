@@ -8,24 +8,25 @@
 import Foundation
 
 class Filter {
-    var filterType: String
+    var foodType: String
     var distance: Int
     
-    init(_ filterType: String, _ distance: Int) {
-        self.filterType = filterType
+    init(_ foodType: String, _ distance: Int) {
+        self.foodType = foodType
         self.distance = distance
     }
     
     init() {
-        filterType = ""
+        foodType = ""
         distance = 0
     }
     
-//    func isIncluded(_ filterType: String) -> Bool {
-//        // Checks if filter name being searched is valid
+//    func isIncluded(_ foodType: String) -> Bool {
+//        // Checks if food type being searched is valid
 //    }
     
-    func distanceRange(_ distance: String) {
-        // returns list of restaurants within the given distance range
-    }
+//    func distanceRange(_ distance: Int) {
+//        // returns list of restaurants within the given distance range
+//        
+//    }
 }
