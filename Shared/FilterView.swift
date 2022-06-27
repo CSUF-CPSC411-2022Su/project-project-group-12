@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct FilterView: View {
-    @State var foodType: String = ""
-    @State var distance: String = ""
+    @SceneStorage("foodType") var foodType: String = ""
+    @SceneStorage("distance") var distance: String = ""
     var body: some View {
         
         NavigationView {
