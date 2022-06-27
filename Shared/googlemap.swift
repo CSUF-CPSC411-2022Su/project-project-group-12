@@ -11,6 +11,8 @@ struct googlemap: View {
     @State var input = ""
     @State var address = ""
     @State var name = ""
+    @State var searchString:String = ""
+    @StateObject var finder = FoodFinder()
     var body: some View {
            Text("Search Bar")
                .font(.largeTitle)
@@ -34,7 +36,8 @@ struct googlemap: View {
                VStack{
                    HStack{
                        Text("Name:")
-                       TextField("name",text:$name)
+                       Text(finder.firstFoundName)
+                           .font(.body)
                    }
                    HStack{
                        Text("Address:")

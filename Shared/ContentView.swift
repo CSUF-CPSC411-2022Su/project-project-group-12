@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var searchString:String = ""
+    @StateObject var finder = FoodFinder()
     var body: some View {
         NavigationView{
          VStack {
