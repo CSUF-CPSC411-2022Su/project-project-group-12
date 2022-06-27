@@ -27,6 +27,13 @@
 		E27F943C28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
 		E27F944C285148F7003B2502 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E27F944B285148F7003B2502 /* .gitignore */; };
 		E27F944E2851494B003B2502 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = E27F944D2851494B003B2502 /* .gitattributes */; };
+		E27F94502856C40C003B2502 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F944F2856C40C003B2502 /* SwiftUIView.swift */; };
+		E2CA40732857105800942557 /* googlemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* googlemap.swift */; };
+		E2CA40742857105800942557 /* googlemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* googlemap.swift */; };
+		E2FA9E40286A3D2600504516 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E3F286A3D2600504516 /* search.swift */; };
+		E2FA9E41286A3D2700504516 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E3F286A3D2600504516 /* search.swift */; };
+		E2FA9E46286A5C0400504516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E45286A5C0400504516 /* ContentView.swift */; };
+		E2FA9E47286A5C0400504516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E45286A5C0400504516 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,10 @@
 		E27F943528514896003B2502 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		E27F944B285148F7003B2502 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E27F944D2851494B003B2502 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		E27F944F2856C40C003B2502 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		E2CA40722857105800942557 /* googlemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googlemap.swift; sourceTree = "<group>"; };
+		E2FA9E3F286A3D2600504516 /* search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
+		E2FA9E45286A5C0400504516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +122,7 @@
 		E27F940928514893003B2502 = {
 			isa = PBXGroup;
 			children = (
+				E27F944F2856C40C003B2502 /* SwiftUIView.swift */,
 				E27F944D2851494B003B2502 /* .gitattributes */,
 				E27F944B285148F7003B2502 /* .gitignore */,
 				E27F940E28514893003B2502 /* Shared */,
@@ -126,6 +138,9 @@
 			children = (
 				7A68C89E285850FF00001ADF /* api */,
 				E27F940F28514893003B2502 /* Group_Project_12App.swift */,
+				E2FA9E45286A5C0400504516 /* ContentView.swift */,
+				E2CA40722857105800942557 /* googlemap.swift */,
+				E2FA9E3F286A3D2600504516 /* search.swift */,
 				E27F941128514896003B2502 /* Assets.xcassets */,
 				D453FE57285AB59500267143 /* CardView.swift */,
 				D431B64C28619DC100E5C2A9 /* RestaruantView.swift */,
@@ -331,6 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */,
+				E2FA9E46286A5C0400504516 /* ContentView.swift in Sources */,
+				E2FA9E40286A3D2600504516 /* search.swift in Sources */,
+				E2CA40732857105800942557 /* googlemap.swift in Sources */,
+				E27F94502856C40C003B2502 /* SwiftUIView.swift in Sources */,
 				D453FE58285AB59500267143 /* CardView.swift in Sources */,
 				7A68C8A02858511200001ADF /* api_view.swift in Sources */,
 				7A68C89C28584EE300001ADF /* api.swift in Sources */,
@@ -344,6 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CA40742857105800942557 /* googlemap.swift in Sources */,
+				E2FA9E47286A5C0400504516 /* ContentView.swift in Sources */,
+				E2FA9E41286A3D2700504516 /* search.swift in Sources */,
 				D453FE59285AB59500267143 /* CardView.swift in Sources */,
 				7A68C8A12858511200001ADF /* api_view.swift in Sources */,
 				7A68C89D28584EE300001ADF /* api.swift in Sources */,
