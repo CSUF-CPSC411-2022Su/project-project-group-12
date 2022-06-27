@@ -26,27 +26,13 @@ struct ContentView: View {
                  .padding()
 
              HStack(alignment: .center){
-//                 Image("drink")
-//                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                     .padding([.top, .trailing])
-//                     .frame(width: 75.0, height: 100.0)
-//                 Image("fries")
-//                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                     .padding(.top)
-//                     .frame(width: 60.0, height: 100.0)
-//                 //Spacer()
-//                 Image("salad")
-//                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-//                     .padding(.top, 0.0)
-//                     .frame(width: 65.0, height: 90.0)
+
                  Image("whole")
                      .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
                      .padding(.top, 0.0)
                      .frame(width: 250.0, height: 220.0)
              }
-//             Button("Google Map") {
-//
-//             }
+
              Spacer()
              
                  Button(action:{

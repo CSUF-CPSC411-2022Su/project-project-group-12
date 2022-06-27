@@ -13,8 +13,6 @@
 		E27F943628514896003B2502 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F943528514896003B2502 /* Tests_macOSLaunchTests.swift */; };
 		E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F940F28514893003B2502 /* Group_Project_12App.swift */; };
 		E27F943828514896003B2502 /* Group_Project_12App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F940F28514893003B2502 /* Group_Project_12App.swift */; };
-		E27F943928514896003B2502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* ContentView.swift */; };
-		E27F943A28514896003B2502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F941028514893003B2502 /* ContentView.swift */; };
 		E27F943B28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
 		E27F943C28514896003B2502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F941128514896003B2502 /* Assets.xcassets */; };
 		E27F944C285148F7003B2502 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E27F944B285148F7003B2502 /* .gitignore */; };
@@ -24,6 +22,8 @@
 		E2CA40742857105800942557 /* googlemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* googlemap.swift */; };
 		E2FA9E40286A3D2600504516 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E3F286A3D2600504516 /* search.swift */; };
 		E2FA9E41286A3D2700504516 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E3F286A3D2600504516 /* search.swift */; };
+		E2FA9E46286A5C0400504516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E45286A5C0400504516 /* ContentView.swift */; };
+		E2FA9E47286A5C0400504516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E45286A5C0400504516 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		E27F940F28514893003B2502 /* Group_Project_12App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Project_12App.swift; sourceTree = "<group>"; };
-		E27F941028514893003B2502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E27F941128514896003B2502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27F941628514896003B2502 /* Group Project 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group Project 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27F941C28514896003B2502 /* Group Project 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group Project 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +60,7 @@
 		E27F944F2856C40C003B2502 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E2CA40722857105800942557 /* googlemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googlemap.swift; sourceTree = "<group>"; };
 		E2FA9E3F286A3D2600504516 /* search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
+		E2FA9E45286A5C0400504516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				E27F940F28514893003B2502 /* Group_Project_12App.swift */,
-				E27F941028514893003B2502 /* ContentView.swift */,
+				E2FA9E45286A5C0400504516 /* ContentView.swift */,
 				E2CA40722857105800942557 /* googlemap.swift */,
 				E2FA9E3F286A3D2600504516 /* search.swift */,
 				E27F941128514896003B2502 /* Assets.xcassets */,
@@ -318,8 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27F943928514896003B2502 /* ContentView.swift in Sources */,
 				E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */,
+				E2FA9E46286A5C0400504516 /* ContentView.swift in Sources */,
 				E2FA9E40286A3D2600504516 /* search.swift in Sources */,
 				E2CA40732857105800942557 /* googlemap.swift in Sources */,
 				E27F94502856C40C003B2502 /* SwiftUIView.swift in Sources */,
@@ -331,8 +331,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2CA40742857105800942557 /* googlemap.swift in Sources */,
+				E2FA9E47286A5C0400504516 /* ContentView.swift in Sources */,
 				E2FA9E41286A3D2700504516 /* search.swift in Sources */,
-				E27F943A28514896003B2502 /* ContentView.swift in Sources */,
 				E27F943828514896003B2502 /* Group_Project_12App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
