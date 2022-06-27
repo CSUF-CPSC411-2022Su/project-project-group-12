@@ -7,21 +7,30 @@ struct CardView: View {
     var restaurant: String
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .frame(width: 320, height: 420)
-                .border(.white, width: 6.0)
-                .cornerRadius(4)
-                .foregroundColor(color.opacity(0.9))
-                .shadow(radius: 4)
-            HStack {
-                Text(restaurant)
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .bold()
+        NavigationView {
+        VStack {
+            ZStack {
+                Rectangle()
+                    .frame(width: 320, height: 420)
+                    .border(.white, width: 6.0)
+                    .cornerRadius(4)
+                    .foregroundColor(color.opacity(0.9))
+                    .shadow(radius: 4)
+                HStack {
+                    Text(restaurant)
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .bold()
+                }
             }
-            
+            NavigationLink(destination: RestaruantView(restaurant: restaurant)) {
+                               Text("Restaruants Currently Saved")
+                                    .padding(.top, 50)
+                           }
+
         }
+    }
+
         .offset(x: offset.width * 1, y: offset.height * 0.4)
         .rotationEffect(.degrees(Double(offset.width / 40)))
         .gesture(
@@ -66,10 +75,4 @@ struct CardView: View {
     }
     
     
-}
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(restaurant: "McDonalds")
-    }
 }
