@@ -1,43 +1,75 @@
-//
-//  CardView.swift
-//  Group Project 12
-//
-//  Created by Parker Stephenson on 6/15/22.
-//
 
 import SwiftUI
 
 struct CardView: View {
-    var restaurant: String
     @State private var offset = CGSize.zero
     @State private var color: Color = .black
+    var restaurant: String
+    
     var body: some View {
-        ZStack{
+        ZStack {
             Rectangle()
                 .frame(width: 320, height: 420)
-                .border(.white, width: 7.0)
+                .border(.white, width: 6.0)
                 .cornerRadius(4)
-            HStack{
+                .foregroundColor(color.opacity(0.9))
+                .shadow(radius: 4)
+            HStack {
                 Text(restaurant)
                     .font(.largeTitle)
                     .foregroundColor(.white)
-                TabView {
-                            RestaruantView()
-                                .tabItem {
-                                    Image(systemName: "info")
-                                    Text("Restaurants Saved")
-                                }
-                        }.environmentObject(restaurant)
+                    .bold()
             }
+            
+        }
+        .offset(x: offset.width * 1, y: offset.height * 0.4)
+        .rotationEffect(.degrees(Double(offset.width / 40)))
+        .gesture(
+            DragGesture()
+                .onChanged { gesture in
+                    offset = gesture.translation
+                    withAnimation {
+                        changeColor(width: offset.width)
+                    }
+                }
+                .onEnded { _ in
+                    withAnimation {
+                        swipeCard(width: offset.width)
+                        changeColor(width: offset.width)
+                    }
+                }
+        )
+    }
+    
+    func swipeCard(width: CGFloat) {
+        switch width {
+        case -500...(-150):
+            print("\(restaurant) removed")
+            offset = CGSize(width: -500, height: 0)
+        case 150...500:
+            print("\(restaurant) added")
+            offset = CGSize(width: 500, height: 0)
+        default:
+            offset = .zero
         }
     }
+    
+    func changeColor(width: CGFloat) {
+        switch width {
+        case -500...(-130):
+            color = .red
+        case 130...500:
+            color = .green
+        default:
+            color = .black
+        }
+    }
+    
+    
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            CardView(restaurant: "McDonalds")
-            CardView(restaurant: "McDonalds")
-        }
+        CardView(restaurant: "McDonalds")
     }
 }

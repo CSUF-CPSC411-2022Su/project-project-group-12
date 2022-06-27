@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var restaurants: [String] = ["McDonalds", "Chik-Fil-A", "Arbys", "Albertos", "Chipotle"].reversed()
+   @State private var restaurants: [String] = ["McDonalds", "ChikFilA", "Lazy Dog", "Burger King", "Wendys"].reversed()
     
     var body: some View {
         VStack {
-            ZStack
-            {
+            ZStack {
                 ForEach(restaurants, id: \.self) { restaurant in
                     CardView(restaurant: restaurant)
                 }
