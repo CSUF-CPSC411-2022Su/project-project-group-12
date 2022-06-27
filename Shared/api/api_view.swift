@@ -19,8 +19,8 @@ struct addressView: View {
     }
 }
 
-struct addressViewPreview: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct addressViewPreview: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
-//  Shared
+//  ArrayView.swift
+//  Group Project 12
 //
-//  Created by 葛聿泠 on 6/8/22.
+//  Created by Parker Stephenson on 6/27/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct ArrayView: View {
    @State private var restaurants: [String] = ["McDonalds", "ChikFilA", "Lazy Dog", "Burger King", "Wendys"].reversed()
     
     var body: some View {
@@ -18,11 +18,5 @@ struct ContentView: View {
                 }
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
