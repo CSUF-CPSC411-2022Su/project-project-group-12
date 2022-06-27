@@ -9,7 +9,8 @@ import SwiftUI
 
 struct googlemap: View {
     @State var input = ""
-    
+    @State var address = ""
+    @State var name = ""
     var body: some View {
            Text("Search Bar")
                .font(.largeTitle)
@@ -22,8 +23,32 @@ struct googlemap: View {
                VStack {
                    Button(action:{
                    }, label: {
-                       Text("Go")
+                       Text("Find Food")
                    })
+               }
+               Spacer()
+               HStack{
+                   Text("Search Result:")
+               }
+               
+               VStack{
+                   HStack{
+                       Text("Name:")
+                       TextField("name",text:$name)
+                   }
+                   HStack{
+                       Text("Address:")
+                       TextField("address",text:$address)
+                   }
+                   Spacer()
+                   VStack{
+                       Image("food1")
+                           .resizable()
+                           .scaledToFit()
+                           .frame(width: 300)
+                   }
+                   
+                   
                }
 
 
