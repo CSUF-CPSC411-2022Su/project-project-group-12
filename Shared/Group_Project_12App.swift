@@ -12,6 +12,8 @@ struct Group_Project_12App: App {
     var body: some Scene {
         WindowGroup {
             FilterView()
+            ArrayView()
         }
     }
+
 }
