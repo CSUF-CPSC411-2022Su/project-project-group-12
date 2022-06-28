@@ -4,34 +4,42 @@
 //
 //  Created by Juan Ramirez on 6/13/22.
 //
+import SwiftUI
 
-import Foundation
-protocol Place {
-    var restaurantName:String {get set}
-    var restaurantAddress:String {get set}
-    var restaurantID:Int {get set}
-    var restaurantPhoto: String {get set }
+struct yelpAPIResult: Codable {
+    var businesses: [Restaurants]
 }
 
-class placesOverview: Place{
-    var restaurantName:String
-    var restaurantAddress:String
-    var restaurantID:Int
-    var restaurantPhoto: String
+struct Restaurants: Codable {
+    var name: String
+    var image_url: String?
+    var price: String?
+}
+
+class RestaurantFinder: ObservableObject{
+    @Published var restaurants: [Restaurants]!
     
-    init(){
-        restaurantName = " "
-        restaurantAddress = " "
-        restaurantID = 0
-        restaurantPhoto = " "
+    func findRestaurants (withFilters filters: String, distanceFrom radius: String){
+        let url = URL(string: "https://api.yelp.com/v3/businesses/search?location=FullertonCA&term=food&categories=\(filters)&radius=\(radius)")!
+        var request = URLRequest(url: url)
+        request.setValue("Bearer s3W10OfMopLLjvWmYlSc8tKRe96G9-NV_FwGeLlJMFCgbRaG1WziH73BLGvvKmNjJYA4SfPZr0Y1SyslMxfN087hNIljk9DyOuS4RO6iSVSO33k9QVYKGqvQoZyzYnYx", forHTTPHeaderField: "Authorization")
+        request.setValue("applciation/json", forHTTPHeaderField: "Accept")
+        let task = URLSession.shared.dataTask(with: request) {
+            (data, _, _) in
+            if let data = data {
+                DispatchQueue.main.async {
+                let jsonDecoder = JSONDecoder()
+                    if let result = try? jsonDecoder.decode(yelpAPIResult.self, from: data){
+                        self.restaurants = result.businesses
+                    } else {
+                        print("Failed to decode data")
+                    }
+                }
+            } else {
+                print("No data was found")
+            }
+        }
+        task.resume()
     }
-    
-    init(name:String, address:String){
-        self.restaurantName = name
-        self.restaurantAddress = address
-        restaurantID = 0
-        restaurantPhoto = " "
-    }
-    
-    
+
 }
