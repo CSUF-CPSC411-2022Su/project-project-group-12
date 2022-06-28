@@ -32,8 +32,8 @@
 		E27F944C285148F7003B2502 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E27F944B285148F7003B2502 /* .gitignore */; };
 		E27F944E2851494B003B2502 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = E27F944D2851494B003B2502 /* .gitattributes */; };
 		E27F94502856C40C003B2502 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F944F2856C40C003B2502 /* SwiftUIView.swift */; };
-		E2CA40732857105800942557 /* googlemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* googlemap.swift */; };
-		E2CA40742857105800942557 /* googlemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* googlemap.swift */; };
+		E2CA40732857105800942557 /* foodmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* foodmap.swift */; };
+		E2CA40742857105800942557 /* foodmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA40722857105800942557 /* foodmap.swift */; };
 		E2FA9E40286A3D2600504516 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E3F286A3D2600504516 /* search.swift */; };
 		E2FA9E41286A3D2700504516 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E3F286A3D2600504516 /* search.swift */; };
 		E2FA9E46286A5C0400504516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA9E45286A5C0400504516 /* ContentView.swift */; };
@@ -59,14 +59,13 @@
 
 /* Begin PBXFileReference section */
 		47BE3D5A2851545200003A52 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		E27F940F28514893003B2502 /* Group_Project_12App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Project_12App.swift; sourceTree = "<group>"; };
-		E27F941028514893003B2502 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		7A68C89B28584EE300001ADF /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		7A68C89F2858511200001ADF /* api_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_view.swift; sourceTree = "<group>"; };
 		D431B64C28619DC100E5C2A9 /* RestaruantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaruantView.swift; sourceTree = "<group>"; };
 		D453FE57285AB59500267143 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D464E111286A517C00A54AF1 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
 		E27F940F28514893003B2502 /* Group_Project_12App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Project_12App.swift; sourceTree = "<group>"; };
+		E27F941028514893003B2502 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E27F941128514896003B2502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27F941628514896003B2502 /* Group Project 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group Project 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27F941C28514896003B2502 /* Group Project 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group Project 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +79,7 @@
 		E27F944B285148F7003B2502 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E27F944D2851494B003B2502 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		E27F944F2856C40C003B2502 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		E2CA40722857105800942557 /* googlemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googlemap.swift; sourceTree = "<group>"; };
+		E2CA40722857105800942557 /* foodmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodmap.swift; sourceTree = "<group>"; };
 		E2FA9E3F286A3D2600504516 /* search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
 		E2FA9E45286A5C0400504516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,10 +145,9 @@
 				7A68C89E285850FF00001ADF /* api */,
 				E27F940F28514893003B2502 /* Group_Project_12App.swift */,
 				E27F941028514893003B2502 /* FilterView.swift */,
-				E27F941128514896003B2502 /* Assets.xcassets */,
 				47BE3D5A2851545200003A52 /* Filter.swift */,
 				E2FA9E45286A5C0400504516 /* ContentView.swift */,
-				E2CA40722857105800942557 /* googlemap.swift */,
+				E2CA40722857105800942557 /* foodmap.swift */,
 				E2FA9E3F286A3D2600504516 /* search.swift */,
 				E27F941128514896003B2502 /* Assets.xcassets */,
 				D453FE57285AB59500267143 /* CardView.swift */,
@@ -361,7 +359,7 @@
 				E27F943728514896003B2502 /* Group_Project_12App.swift in Sources */,
 				E2FA9E46286A5C0400504516 /* ContentView.swift in Sources */,
 				E2FA9E40286A3D2600504516 /* search.swift in Sources */,
-				E2CA40732857105800942557 /* googlemap.swift in Sources */,
+				E2CA40732857105800942557 /* foodmap.swift in Sources */,
 				E27F94502856C40C003B2502 /* SwiftUIView.swift in Sources */,
 				D453FE58285AB59500267143 /* CardView.swift in Sources */,
 				7A68C8A02858511200001ADF /* api_view.swift in Sources */,
@@ -378,7 +376,7 @@
 			files = (
 				E27F943A28514896003B2502 /* FilterView.swift in Sources */,
 				47BE3D5C2851545200003A52 /* Filter.swift in Sources */,
-				E2CA40742857105800942557 /* googlemap.swift in Sources */,
+				E2CA40742857105800942557 /* foodmap.swift in Sources */,
 				E2FA9E47286A5C0400504516 /* ContentView.swift in Sources */,
 				E2FA9E41286A3D2700504516 /* search.swift in Sources */,
 				D453FE59285AB59500267143 /* CardView.swift in Sources */,
