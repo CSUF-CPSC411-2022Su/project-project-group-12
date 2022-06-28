@@ -4,7 +4,7 @@ import SwiftUI
 struct CardView: View {
     @State private var offset = CGSize.zero
     @State private var color: Color = .black
-    var restaurant: String
+    var restaurant: Restaurants
     
     var body: some View {
         NavigationView {
@@ -17,7 +17,7 @@ struct CardView: View {
                     .foregroundColor(color.opacity(0.9))
                     .shadow(radius: 4)
                 HStack {
-                    Text(restaurant)
+                    Text(restaurant.name)
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .bold()

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct RestaruantView: View {
-    var restaurant: String
+    var restaurant: Restaurants
     var body: some View {
-        Text(restaurant)
+        Text(restaurant.name)
     }
 }
 

@@ -7,26 +7,17 @@
 
 import Foundation
 
-class Filter {
+class Filter : ObservableObject {
     var foodType: String
-    var distance: Int
+    var distance: String
     
-    init(_ foodType: String, _ distance: Int) {
+    init(_ foodType: String, _ distance: String) {
         self.foodType = foodType
         self.distance = distance
     }
     
     init() {
         foodType = ""
-        distance = 0
+        distance = "1000"
+        }
     }
-    
-//    func isIncluded(_ foodType: String) -> Bool {
-//        // Checks if food type being searched is valid
-//    }
-    
-//    func distanceRange(_ distance: Int) {
-//        // returns list of restaurants within the given distance range
-//        
-//    }
-}

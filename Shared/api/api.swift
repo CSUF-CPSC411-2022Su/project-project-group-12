@@ -10,10 +10,9 @@ struct yelpAPIResult: Codable {
     var businesses: [Restaurants]
 }
 
-struct Restaurants: Codable {
+struct Restaurants: Codable, Identifiable {
+    var id: String
     var name: String
-    var image_url: String?
-    var price: String?
 }
 
 class RestaurantFinder: ObservableObject{
@@ -31,6 +30,7 @@ class RestaurantFinder: ObservableObject{
                 let jsonDecoder = JSONDecoder()
                     if let result = try? jsonDecoder.decode(yelpAPIResult.self, from: data){
                         self.restaurants = result.businesses
+                        print(self.restaurants)
                     } else {
                         print("Failed to decode data")
                     }
