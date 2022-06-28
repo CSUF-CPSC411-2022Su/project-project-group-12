@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct googlemap: View {
-    @State var input = ""
-    @State var address = ""
-    @State var name = ""
+    @SceneStorage("searchString") var input  = ""
+    //@State var input = ""
+    @SceneStorage("address") var address  = ""
+    //@State var address = ""
+    @SceneStorage("name") var name  = ""
+    //@State var name = ""
     @State var searchString:String = ""
     @StateObject var finder = FoodFinder()
     var body: some View {
@@ -36,19 +39,28 @@ struct googlemap: View {
                VStack{
                    HStack{
                        Text("Name:")
-                       Text(finder.firstFoundName)
-                           .font(.body)
+                       TextField("name",text:$name)
                    }
                    HStack{
                        Text("Address:")
                        TextField("address",text:$address)
                    }
                    Spacer()
+//                   VStack{
+//                       Image("food1")
+//                           .resizable()
+//                           .scaledToFit()
+//                           .frame(width: 300)
+//                   }
+                   Spacer()
                    VStack{
-                       Image("food1")
-                           .resizable()
-                           .scaledToFit()
-                           .frame(width: 300)
+                       Text("Search History")
+                           .font(.largeTitle)
+                           .fontWeight(.medium)
+                           .foregroundColor(Color.blue)
+                       NavigationLink(destination: searchHistory()) {
+                           
+                       }
                    }
                    
                    
@@ -61,10 +73,41 @@ struct googlemap: View {
 
        }
 }
-
+struct searchHistory: View{
+    @SceneStorage("address") var address  = ""
+    @SceneStorage("searchString") var input  = ""
+    var body: some View{
+        NavigationView{
+            GeometryReader{ geometry in
+            VStack{
+                Text("Seaarch History")
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.blue)
+                    .padding()
+                    
+                Spacer()
+                HStack{
+                    Text("Address:")
+                    TextField("address",text:$input)
+                    
+                }
+                VStack{
+                    Image("food1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300)
+                        .padding()
+                }.frame(height:geometry.size.height / 2)
+            }
+            }
+        }
+    }
+}
 
 struct googlemap_Previews: PreviewProvider {
     static var previews: some View {
         googlemap()
     }
 }
+

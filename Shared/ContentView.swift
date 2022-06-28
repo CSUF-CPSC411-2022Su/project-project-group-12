@@ -43,14 +43,7 @@ struct ContentView: View {
                              Text("Food Map")
                                  .fontWeight(.bold)
                                  .font(.title)
-                                 .padding()
-                                 .background(Color.white)
-                                 .cornerRadius(30)
-                                 .foregroundColor(.green)
-                                 .padding(10)
-                                 .overlay(
-                                     RoundedRectangle(cornerRadius: 40)
-                                         .stroke(Color.white, lineWidth: 4)
+                                 .modifier(MyModifier()
                                      
                              )
                              
@@ -72,6 +65,20 @@ struct ContentView: View {
 
 }
 
+struct MyModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color.white)
+            .cornerRadius(30)
+            .foregroundColor(.green)
+            .padding(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 40)
+                    .stroke(Color.white, lineWidth: 4)
+ )   }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
@@ -79,3 +86,4 @@ struct ContentView_Previews: PreviewProvider {
             
     }
 }
+
