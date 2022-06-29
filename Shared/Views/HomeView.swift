@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+//The Home page of the app
+struct HomeView: View {
     @State var searchString:String = ""
-    @StateObject var restaurantFinder = RestaurantFinder()
-    @StateObject var filters = Filter()
+    var restaurants: [String]
     var body: some View {
         NavigationView{
          VStack {
@@ -21,7 +21,7 @@ struct ContentView: View {
                  .lineLimit(nil)
                  .padding(.top)
              Text("Welcome")
-                 .foregroundColor(Color.red) // This was added
+                 .foregroundColor(Color.red)
                  .padding()
              HStack(alignment: .center){
                  Image("whole")
@@ -30,6 +30,8 @@ struct ContentView: View {
                      .frame(width: 250.0, height: 220.0)
              }
              Spacer()
+             
+                //Links to the foodmap page
              Button(action:{
                 print("touch")
               }
@@ -38,10 +40,12 @@ struct ContentView: View {
                 Text("Food Map")
                     .fontWeight(.bold)
                     .font(.title)
-                    .modifier(MyModifier())
+                    .modifier(HomeViewModifier())
                 }
              }
              HStack{
+                 
+                 //Links to the Filtering page
              Button(action:{
                 print("touch")
              }){
@@ -49,18 +53,15 @@ struct ContentView: View {
              Text("Filter")
                 .fontWeight(.bold)
                 .font(.title)
-                .modifier(MyModifier())
+                .modifier(HomeViewModifier())
              }
             }
-            Button(action:{
-                restaurantFinder.findRestaurants(withFilters: filters.foodType, distanceFrom: filters.distance)
-            }){
-                NavigationLink(destination: ArrayView(restaurants: restaurantFinder.restaurants)){
-                    Text("swipe")
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .modifier(MyModifier())
-                    }
+                 //Links to the page where you swipe
+            NavigationLink(destination: ArrayView(restaurants: restaurants, savedRestaurants: [""])){
+                Text("Swipe!")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .modifier(HomeViewModifier())
                 }
              }
            }
@@ -70,25 +71,3 @@ struct ContentView: View {
             .colorInvert())
      }
 }
-
-struct MyModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding()
-            .background(Color.white)
-            .cornerRadius(30)
-            .foregroundColor(.green)
-            .padding(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 40)
-                    .stroke(Color.white, lineWidth: 4)
- )}
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-

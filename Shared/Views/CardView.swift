@@ -1,10 +1,13 @@
 
 import SwiftUI
 
+
+//View that handles logic for the cards as well as displays the name used
 struct CardView: View {
     @State private var offset = CGSize.zero
     @State private var color: Color = .black
-    var restaurant: Restaurants
+    var restaurant: String  //The current restaurant being displayed
+    @Binding var savedRestaurants: [String] //Shows current saved restaurants
     
     var body: some View {
         NavigationView {
@@ -17,20 +20,23 @@ struct CardView: View {
                     .foregroundColor(color.opacity(0.9))
                     .shadow(radius: 4)
                 HStack {
-                    Text(restaurant.name)
+                    Text(restaurant)
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .bold()
                 }
             }
-            NavigationLink(destination: RestaruantView(restaurant: restaurant)) {
-                               Text("Restaruants Currently Saved")
-                                    .padding(.top, 50)
-                           }
-
+            
+            Button(action: {
+                print (self.savedRestaurants)
+            }){
+                NavigationLink(destination: RestaruantsView(savedRestaurants: $savedRestaurants)) {
+                Text("View Saved Restaurants")
+                    .padding(.top, 50)
+                }
+            }
         }
     }
-
         .offset(x: offset.width * 1, y: offset.height * 0.4)
         .rotationEffect(.degrees(Double(offset.width / 40)))
         .gesture(
@@ -43,20 +49,22 @@ struct CardView: View {
                 }
                 .onEnded { _ in
                     withAnimation {
-                        swipeCard(width: offset.width)
+                        swipeCard(width: offset.width,
+                                  restaurant: restaurant)
                         changeColor(width: offset.width)
                     }
                 }
         )
     }
     
-    func swipeCard(width: CGFloat) {
+    func swipeCard(width: CGFloat, restaurant: String) {
         switch width {
         case -500...(-150):
             print("\(restaurant) removed")
             offset = CGSize(width: -500, height: 0)
         case 150...500:
             print("\(restaurant) added")
+            self.savedRestaurants.append(restaurant)
             offset = CGSize(width: 500, height: 0)
         default:
             offset = .zero

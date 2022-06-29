@@ -15,7 +15,6 @@ struct foodmap: View {
     @SceneStorage("name") var name  = ""
     //@State var name = ""
     @State var searchString:String = ""
-    @StateObject var finder = FoodFinder()
     var body: some View {
            Text("Search Bar")
                .font(.largeTitle)
