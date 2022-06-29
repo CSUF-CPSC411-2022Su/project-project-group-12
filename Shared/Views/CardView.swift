@@ -8,6 +8,7 @@ struct CardView: View {
     @State private var color: Color = .black
     var restaurant: String  //The current restaurant being displayed
     @Binding var savedRestaurants: [String] //Shows current saved restaurants
+    @EnvironmentObject var sharedRestaurants: SharedRestaurants
     
     var body: some View {
         NavigationView {
@@ -26,13 +27,22 @@ struct CardView: View {
                         .bold()
                 }
             }
-            
-            Button(action: {
-                print (self.savedRestaurants)
-            }){
-                NavigationLink(destination: RestaruantsView(savedRestaurants: $savedRestaurants)) {
-                Text("View Saved Restaurants")
-                    .padding(.top, 50)
+            HStack{
+                Button(action: {
+                    print (self.savedRestaurants)
+                }){
+                    NavigationLink(destination: RestaruantsView(savedRestaurants:   $savedRestaurants)) {
+                    Text("View Saved Restaurants")
+                        .padding(.top, 50)
+                    }
+                }
+                Button(action: {
+                    print (self.savedRestaurants)
+                }){
+                    NavigationLink(destination: SharedRestaruantsView()) {
+                    Text("View Shared Restaurants")
+                        .padding(.top, 50)
+                    }
                 }
             }
         }
@@ -62,9 +72,13 @@ struct CardView: View {
         case -500...(-150):
             print("\(restaurant) removed")
             offset = CGSize(width: -500, height: 0)
+            if sharedRestaurants.sharedRestaurants.contains(restaurant){
+                sharedRestaurants.sharedRestaurants = sharedRestaurants.sharedRestaurants.filter {$0 != restaurant}
+            }
         case 150...500:
             print("\(restaurant) added")
             self.savedRestaurants.append(restaurant)
+            sharedRestaurants.sharedRestaurants.append(restaurant)
             offset = CGSize(width: 500, height: 0)
         default:
             offset = .zero

@@ -8,11 +8,16 @@
 import SwiftUI
 
 
+class SharedRestaurants: ObservableObject {
+    @Published var sharedRestaurants: [String] = [""]
+}
+
 //View that allows us to filter the restaurant within our request
 struct FilterView: View {
     @SceneStorage("foodType") var foodType: String = ""
     @SceneStorage("distance") var distance: String = ""
     @StateObject var restaurantFinder = RestaurantFinder()
+    @StateObject var sharedRestaurants = SharedRestaurants()
     
     var body: some View {
         
@@ -75,10 +80,9 @@ struct FilterView: View {
                     }
                 }
                 Spacer()
-        }
+        } .environmentObject(sharedRestaurants)
     }
 }
-
 
 struct OtherFoodSuggestionsLink: View {
     var body: some View {
